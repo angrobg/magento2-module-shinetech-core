@@ -1,0 +1,25 @@
+{
+    "name": "shinetech/module-core",
+    "description": "Shinetech Extensions",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Jason Sun",
+            "email": "sunf@shinetechsoftware.com"
+        }
+    ],
+    "require": {
+        "php": "~7.4.0 || ~8.1.0",
+        "magento/framework": "103.0.*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "ST\\Core\\": ""
+        }
+    }
+}

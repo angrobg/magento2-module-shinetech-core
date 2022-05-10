@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="ST_Core::top_level" module="ST_Core" resource="ST_Core::top_level" sortOrder="100" title="Shinetech Extensions"/>
+	</menu>
+</config>

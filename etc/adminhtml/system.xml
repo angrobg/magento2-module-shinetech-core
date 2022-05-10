@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<tab id="shinetech" translate="label" sortOrder="600" class="st-extensions">
+			<label>Shinetech Extensions</label>
+		</tab>
+		<section id="st_general" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+			<label>General</label>
+			<tab>shinetech</tab>
+			<resource>ST_Core::config_st_core</resource>
+			<group id="log" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+				<label>Log</label>
+				<field id="debug_enable" type="select" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Enable Debug</label>
+					<comment>Logs will be recorded to file after enable</comment>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>
