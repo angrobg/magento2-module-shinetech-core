@@ -8,7 +8,6 @@ declare(strict_types=1);
 namespace ST\Core\Helper;
 
 use Magento\Framework\App\Helper\AbstractHelper;
-use Magento\Tests\NamingConvention\true\string;
 
 class Export extends AbstractHelper
 {
@@ -22,9 +21,10 @@ class Export extends AbstractHelper
      * @param \Magento\Framework\Filesystem\DriverInterface $filesystemDriver
      */
     public function __construct(
-        \Magento\Framework\App\Helper\Context $context,
+        \Magento\Framework\App\Helper\Context         $context,
         \Magento\Framework\Filesystem\DriverInterface $filesystemDriver
-    ) {
+    )
+    {
         $this->filesystemDriver = $filesystemDriver;
         parent::__construct($context);
     }
@@ -41,7 +41,7 @@ class Export extends AbstractHelper
     {
         $exportHandle = $this->filesystemDriver->fileOpen($filePath, "w");
         // phpcs:ignore Magento2.Functions.DiscouragedFunction.Discouraged
-        fprintf($exportHandle, chr(0xEF).chr(0xBB).chr(0xBF));
+        fprintf($exportHandle, chr(0xEF) . chr(0xBB) . chr(0xBF));
 
         // Write header
         if ($header) {
